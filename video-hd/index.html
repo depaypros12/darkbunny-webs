@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video HD Enhancer - DARKBUNNY TOOLS</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Shared & Local CSS -->
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="brand-wrapper">
+      <a href="../index.html" class="brand">DARKBUNNY</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../photo-hd/index.html">Photo HD</a></li>
+      <li><a href="#" class="active">Video HD</a></li>
+      <li><a href="../tiktok-remover/index.html">TikTok Remover</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="container">
+    <section class="tool-header">
+      <h1 class="tool-title">Video HD Enhancer</h1>
+      <p class="tool-desc">Tingkatkan kualitas, ketajaman, dan warna video kamu dengan cepat.</p>
+    </section>
+
+    <!-- Upload Card Area -->
+    <div class="upload-card" id="drop-zone">
+      <input type="file" id="video-input" accept="video/*" hidden>
+      <div class="upload-content">
+        <div class="upload-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="23 7 16 12 23 17 23 7"/>
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+          </svg>
+        </div>
+        <h3>Tarik & lepas video di sini, atau <span class="browse-btn">Cari File</span></h3>
+        <p>Mendukung format MP4, WEBM, MOV (Maksimal 50MB)</p>
+      </div>
+    </div>
+
+    <!-- Preview & Process Section -->
+    <div id="process-section" class="process-card hidden">
+      <div class="video-preview-wrapper">
+        <video id="video-preview" controls></video>
+      </div>
+
+      <div class="action-bar">
+        <button id="btn-enhance-video" class="btn-primary">Enhance Video HD</button>
+        <a id="btn-download-video" href="#" download="darkbunny-video-hd.mp4" class="btn-secondary hidden">Download HD Video</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 DARKBUNNY TOOLS. All rights reserved.</p>
+  </footer>
+
+  <script src="js/video-enhancer.js"></script>
+</body>
+</html>

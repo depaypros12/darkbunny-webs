@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Remover - DARKBUNNY TOOLS</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Shared & Local CSS -->
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google MediaPipe Tasks Vision (Ultra Fast & Lightweight ~2.5MB) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision/vision_bundle.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="brand-wrapper">
+      <a href="../index.html" class="brand">DARKBUNNY</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../photo-hd/index.html">Photo HD</a></li>
+      <li><a href="../video-hd/index.html">Video HD</a></li>
+      <li><a href="../tiktok-remover/index.html">TikTok Remover</a></li>
+      <li><a href="#" class="active">BG Remover</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="container">
+    <section class="tool-header">
+      <h1 class="tool-title">AI Background Remover</h1>
+      <p class="tool-desc">Hapus latar belakang foto secara otomatis dan presisi tinggi langsung di browser.</p>
+    </section>
+
+    <!-- Upload Area -->
+    <div class="upload-card" id="drop-zone">
+      <input type="file" id="bg-photo-input" accept="image/*" hidden>
+      <div class="upload-content">
+        <div class="upload-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+        </div>
+        <h3>Tarik & lepas foto di sini, atau <span class="browse-btn">Cari File</span></h3>
+        <p>Mendukung JPG, PNG, WEBP</p>
+      </div>
+    </div>
+
+    <!-- Processing & Result Area -->
+    <div id="process-section" class="process-card hidden">
+      <div class="preview-grid">
+        <div class="preview-box">
+          <span class="badge">Foto Asli</span>
+          <img id="img-original" src="" alt="Foto Asli">
+        </div>
+        <div class="preview-box transparent-bg">
+          <span class="badge">Tanpa Background</span>
+          <div id="loading-spinner" class="spinner hidden">
+            <div class="ring"></div>
+            <p id="loading-text">Memuat AI Engine...</p>
+          </div>
+          <img id="img-result" src="" alt="Hasil BG Remover" class="hidden">
+        </div>
+      </div>
+
+      <div class="action-bar">
+        <button id="btn-remove-bg" class="btn-primary">Hapus Background</button>
+        <a id="btn-download-bg" href="#" download="darkbunny-nobg.png" class="btn-secondary hidden">Download PNG Transparan</a>
+      </div>
+    </div>
+  </main>
+
+  <canvas id="process-canvas" style="display:none;"></canvas>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 DARKBUNNY TOOLS. All rights reserved.</p>
+  </footer>
+
+  <script src="js/bg-remover.js"></script>
+</body>
+</html>

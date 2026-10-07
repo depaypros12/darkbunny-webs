@@ -1,0 +1,189 @@
+.tool-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tool-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #fff 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tool-desc {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+.upload-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 2px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 50px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.upload-card:hover, .upload-card.drag-over {
+  border-color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.05);
+}
+
+.upload-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  color: #8b5cf6;
+}
+
+.upload-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.browse-btn {
+  color: #8b5cf6;
+  text-decoration: underline;
+}
+
+.upload-content p {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.process-card {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Grid Layout Dual Preview */
+.preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .preview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.preview-box {
+  position: relative;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Background catur khas transparan PNG */
+.transparent-bg {
+  background-image: linear-gradient(45deg, #1e1e24 25%, transparent 25%), 
+                    linear-gradient(-45deg, #1e1e24 25%, transparent 25%), 
+                    linear-gradient(45deg, transparent 75%, #1e1e24 75%), 
+                    linear-gradient(-45deg, transparent 75%, #1e1e24 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.preview-box img {
+  max-width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+/* Loading Spinner */
+.spinner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: #8b5cf6;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.ring {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(139, 92, 246, 0.2);
+  border-top-color: #8b5cf6;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.action-bar {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.btn-primary, .btn-secondary {
+  flex: 1;
+  padding: 14px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+.btn-secondary {
+  background: #06b6d4;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+}

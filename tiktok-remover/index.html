@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Watermark Remover - DARKBUNNY TOOLS</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Shared & Local CSS -->
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="brand-wrapper">
+      <a href="../index.html" class="brand">DARKBUNNY</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../photo-hd/index.html">Photo HD</a></li>
+      <li><a href="../video-hd/index.html">Video HD</a></li>
+      <li><a href="#" class="active">TikTok Remover</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="container">
+    <section class="tool-header">
+      <h1 class="tool-title">TikTok Downloader</h1>
+      <p class="tool-desc">Tempelkan URL video TikTok di bawah ini untuk mengunduh tanpa watermark secara instan.</p>
+    </section>
+
+    <!-- Input Form -->
+    <div class="input-card">
+      <div class="input-group">
+        <input type="text" id="tiktok-url" placeholder="Paste link TikTok di sini... (contoh: https://vm.tiktok.com/...)" autocomplete="off">
+        <button id="btn-download" type="button">
+          <span id="btn-text">Download</span>
+          <div id="btn-loader" class="spinner hidden"></div>
+        </button>
+      </div>
+      <p id="error-msg" class="error-msg hidden"></p>
+    </div>
+
+    <!-- Result Card (Hidden by default) -->
+    <div id="result-card" class="result-card hidden">
+      <div class="media-preview">
+        <img id="video-cover" src="" alt="Thumbnail Video">
+      </div>
+      <div class="media-info">
+        <h3 id="video-author">@username</h3>
+        <p id="video-title">Deskripsi video TikTok akan muncul di sini...</p>
+        
+        <div class="action-buttons">
+          <a id="dl-no-watermark" href="#" target="_blank" class="btn-action primary">
+            Download MP4 (No Watermark)
+          </a>
+          <a id="dl-audio" href="#" target="_blank" class="btn-action secondary">
+            Download MP3 (Audio)
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 DARKBUNNY TOOLS. All rights reserved.</p>
+  </footer>
+
+  <script src="js/tiktok-downloader.js"></script>
+</body>
+</html>

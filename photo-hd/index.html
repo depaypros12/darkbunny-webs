@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo HD Enhancer - DARKBUNNY TOOLS</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Shared & Local CSS -->
+  <link rel="stylesheet" href="../assets/css/global.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="brand-wrapper">
+      <a href="../index.html" class="brand">DARKBUNNY</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#" class="active">Photo HD</a></li>
+      <li><a href="../video-hd/index.html">Video HD</a></li>
+      <li><a href="../tiktok-remover/index.html">TikTok Remover</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Container -->
+  <main class="container">
+    <section class="tool-header">
+      <h1 class="tool-title">Photo HD Enhancer</h1>
+      <p class="tool-desc">Unggah foto buram atau berkualitas rendah untuk ditingkatkan ketajamannya secara otomatis.</p>
+    </section>
+
+    <!-- Upload Card Area -->
+    <div class="upload-card" id="drop-zone">
+      <input type="file" id="photo-input" accept="image/*" hidden>
+      <div class="upload-content" id="upload-prompt">
+        <div class="upload-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="17 8 12 3 7 8"/>
+            <line x1="12" y1="3" x2="12" y2="15"/>
+          </svg>
+        </div>
+        <h3>Tarik & lepas foto di sini, atau <span class="browse-btn">Cari File</span></h3>
+        <p>Mendukung format JPG, PNG, WEBP (Maksimal 10MB)</p>
+      </div>
+    </div>
+
+    <!-- Preview & Slider Section (Hidden by default) -->
+    <div id="process-section" class="process-card hidden">
+      <div class="comparison-container" id="comparison-slider">
+        <img id="img-before" src="" alt="Foto Asli" class="image-before">
+        <div class="image-after-wrapper" id="after-wrapper">
+          <img id="img-after" src="" alt="Foto Hasil HD" class="image-after">
+        </div>
+        <input type="range" min="0" max="100" value="50" class="slider" id="slider-range">
+        <div class="slider-button" id="slider-button"></div>
+      </div>
+
+      <div class="action-bar">
+        <button id="btn-enhance" class="btn-primary">Enhance Photo HD</button>
+        <a id="btn-download-photo" href="#" download="darkbunny-enhanced.png" class="btn-secondary hidden">Download HD Image</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 DARKBUNNY TOOLS. All rights reserved.</p>
+  </footer>
+
+  <script src="js/photo-enhancer.js"></script>
+</body>
+</html>

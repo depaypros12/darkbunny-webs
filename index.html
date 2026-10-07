@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DARKBUNNY TOOLS - All-in-One Online Utilities</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="assets/css/global.css">
+
+  <style>
+    /* Inline CSS Animasi Intro (Biar pasti kepanggil & ga error) */
+    #intro-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #050508;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+
+    #intro-screen.fade-out {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .intro-content {
+      text-align: center;
+    }
+
+    .intro-title {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 4px;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: introAppear 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
+      background: linear-gradient(135deg, #ffffff 0%, #8b5cf6 50%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+    }
+
+    .intro-line {
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+      margin: 1rem auto 0;
+      animation: lineExpand 0.8s ease forwards 1s;
+    }
+
+    @keyframes introAppear {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes lineExpand {
+      to {
+        width: 140px;
+      }
+    }
+
+    /* Landing Page Styles */
+    .hero {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #fff 0%, #8b5cf6 50%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+    .grid-tools {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+    .card-tool {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 30px;
+      text-decoration: none;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+    .card-tool:hover {
+      transform: translateY(-5px);
+      border-color: #8b5cf6;
+      background: rgba(139, 92, 246, 0.05);
+    }
+    .card-tool h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+    .card-tool p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .intro-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Splash Screen Intro -->
+  <div id="intro-screen">
+    <div class="intro-content">
+      <h1 class="intro-title">DARKBUNNY TOOLS</h1>
+      <div class="intro-line"></div>
+    </div>
+  </div>
+
+  <!-- Navbar Utama -->
+  <nav class="navbar">
+    <div class="brand-wrapper">
+      <a href="index.html" class="brand">DARKBUNNY</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="photo-hd/index.html">Photo HD</a></li>
+      <li><a href="video-hd/index.html">Video HD</a></li>
+      <li><a href="tiktok-remover/index.html">TikTok Remover</a></li>
+      <li><a href="bg-remover/index.html">Hapus Background</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <main class="container">
+    <section class="hero">
+      <h1>DARKBUNNY TOOLS</h1>
+      <p>Kumpulan utility tools gratis tanpa ribet. Tingkatkan kualitas media & unduh konten favoritmu dalam hitungan detik.</p>
+    </section>
+
+    <!-- Grid Fitur Utama -->
+    <div class="grid-tools">
+      <a href="photo-hd/index.html" class="card-tool">
+        <h3>Photo HD Enhancer</h3>
+        <p>Ubah foto buram, pecah, atau beresolusi rendah jadi super tajam secara otomatis.</p>
+      </a>
+
+      <a href="video-hd/index.html" class="card-tool">
+        <h3>Video HD Enhancer</h3>
+        <p>Upscale kualitas video kamu jadi jernih dan lebih enak ditonton.</p>
+      </a>
+
+      <a href="bg-remover/index.html" class="card-tool">
+        <h3>Hapus BAckground</h3>
+        <p>Hapus background foto lu dengan gratis cuma disini hahahahahah</p>
+      </a>
+
+      <a href="tiktok-remover/index.html" class="card-tool">
+        <h3>TikTok No Watermark</h3>
+        <p>Download video TikTok tanpa watermark gratis cuma lewat tempel link.</p>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 DARKBUNNY TOOLS. All rights reserved.</p>
+  </footer>
+
+  <!-- Controller Script untuk Animasi Intro -->
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const intro = document.getElementById("intro-screen");
+      if (!intro) return;
+
+      // Kasih jeda 2.2 detik buat animasi tulisan & garisnya jalan full
+      setTimeout(() => {
+        intro.classList.add("fade-out");
+
+        // Hapus elemen dari DOM setelah efek fade-out selesai
+        setTimeout(() => {
+          intro.remove();
+        }, 800);
+      }, 2200);
+    });
+  </script>
+</body>
+</html>
